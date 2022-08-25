@@ -66,7 +66,8 @@ Example `git-conventional-commits.json`
 
     "commitUrl": "https://github.com/ACCOUNT/REPOSITORY/commit/%commit%",
     "commitRangeUrl": "https://github.com/ACCOUNT/REPOSITORY/compare/%from%...%to%?diff=split",
-    "issueUrl": "https://github.com/ACCOUNT/REPOSITORY/issues/%issue%"
+    "issueUrl": "https://github.com/ACCOUNT/REPOSITORY/issues/%issue%",
+    "issueName": "#%id%"
   }
 }
 
@@ -114,7 +115,10 @@ Example `git-conventional-commits.json`
     * `%issue%` issue id placeholder
     * eg `https://jira.example.org/browse/%issue%`
     * if not set or empty link generation is disabled
- 
+  * `issueName` a template for the displayed name of an issue link
+    * `%id%` issue id placeholder
+    * eg `#%id%`
+    * if not set, issue id will be used as displayed name
 
 ### Automatically Validate Commit Message Convention before Commit
 
